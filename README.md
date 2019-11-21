@@ -15,21 +15,20 @@
 
 ## Arrays
 
-1. `max (array)`
-1. `min (array)`
+1. `largest (array)`
+1. `smallest (array)`
 1. `longest (array)`
 1. `shortest (array)`
 1. `sum (array)`
 1. `mean (array)`
 1. `median (array)`
 1. `product (array)`
-1. `arrayContains (array, val)`
-1. `findFirstIndex (array, val)`
-1. `findAllIndexes (array, val)`
+1. `includes (array, val)`
+1. `firstIndexOf (array, val)`
+1. `lastIndexOf (array, val)`
 1. `countEvens (array)`
 1. `countOdds (array)`
-1. `countElement (array, val)`
-1. `countElements (array)`
+1. `countValue (array, val)`
 1. `selectEvens (array)`
 1. `selectOdds (array)`
 1. `selectGreaterThan (array, num)`
