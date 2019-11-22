@@ -21,7 +21,7 @@
  * @param {object[]} rightArray - The right array to concatenate
  * @returns {object[]} The concatenation of the two given arrays
  */
-function concat(array) {
+function concat(leftArray, rightArray) {
   // This is your job. :)
 }
 
