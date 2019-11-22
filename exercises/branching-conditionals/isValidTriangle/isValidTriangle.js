@@ -24,10 +24,16 @@ function isValidTriangle(a, b, c) {
 if (require.main === module) {
   console.log('Running sanity checks for isValidTriangle:');
 
-  console.log(isValidT(0) === true);
-  console.log(isZero(1) === false);
-  console.log(isZero(-1) === false);
-  console.log(isZero(-100.20) === false);
+  // The order of the arguments should not matter.
+  console.log(isValidTriangle(3, 4, 5) === true);
+  console.log(isValidTriangle(3, 5, 4) === true);
+  console.log(isValidTriangle(4, 3, 5) === true);
+  console.log(isValidTriangle(4, 5, 3) === true);
+  console.log(isValidTriangle(5, 3, 4) === true);
+  console.log(isValidTriangle(5, 4, 3) === true);
+
+  // Add your own sanity checks here. Test negative cases.
+  // How else will you be sure your code does what you think it does?
 }
 
 module.exports = isValidTriangle;
