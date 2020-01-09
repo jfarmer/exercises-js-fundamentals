@@ -1,84 +1,74 @@
 # JavaScript Exercises - Fundamentals
 
-## Conditionals
+## Numbers
 
-1. `isPositive (num)`
-1. `isNegative (num)`
-1. `isZero (num)`
-1. `isEven (num)`
-1. `isOdd (num)`
-1. `daysInMonth (month)`
-1. `letterGrade (pct)`
-1. `isValidTriangle (a, b, c)`
-1. `triangleType (a, b, c)`
-1. `rockPaperScissorsWinner (firstChoice, secondChoice)`
+1. [isZero](exercises/numbers/isZero)
+1. [isPositive](exercises/numbers/isPositive)
+1. [isNegative](exercises/numbers/isNegative)
+1. [isEven](exercises/numbers/isEven)
+1. [isOdd](exercises/numbers/isOdd)
+1. [remainderOf](exercises/numbers/remainderOf)
+1. [isMultipleOf](exercises/numbers/isMultipleOf)
+1. [power](exercises/numbers/power)
+1. [isPowerOf](exercises/numbers/isPowerOf)
+1. [isPowerOfTwo](exercises/numbers/isPowerOfTwo)
+1. [isPerfectSquare](exercises/numbers/isPerfectSquare)
+1. [factors](exercises/numbers/factors)
+1. [isPrime](exercises/numbers/isPrime)
+1. [primeFactors](exercises/numbers/primeFactors)
+1. [sumOfRange](exercises/numbers/sumOfRange)
+1. [factorial](exercises/numbers/factorial)
+1. [celciusToFahrenheit](exercises/numbers/celciusToFahrenheit)
+1. [fahrenheitToCelcius](exercises/numbers/fahrenheitToCelcius)
+1. [fibonacci](exercises/numbers/fibonacci)
 
-## Arrays
+## Branching / Conditionals
 
-1. `largest (array)`
-1. `smallest (array)`
-1. `longest (array)`
-1. `shortest (array)`
-1. `sum (array)`
-1. `mean (array)`
-1. `median (array)`
-1. `product (array)`
-1. `includes (array, val)`
-1. `firstIndexOf (array, val)`
-1. `lastIndexOf (array, val)`
-1. `countEvens (array)`
-1. `countOdds (array)`
-1. `countValue (array, val)`
-1. `selectEvens (array)`
-1. `selectOdds (array)`
-1. `selectGreaterThan (array, num)`
-1. `selectLessThan (array, num)`
-1. `selectAboveMean (array)`
-1. `selectLongerThan (array, length)`
-1. `selectShorterThan (array, length)`
-1. `removeEmpty (array)`
-1. `removeElement (array, val)`
-1. `allPositive (array)`
-1. `anyPositive (array)`
-1. `addArrays (leftArray, rightArray)`
-
-## Strings
-
-1. `longestWord (string)`
-1. `countLetter (string, letter)`
-1. `capitalize (string)`
-1. `abbreviate (string)`
-1. `toUppercase (string)`
-1. `toLowercase (string)`
-1. `toTitleCase (string)`
-1. `toSnakeCase (string)`
-1. `replaceCharacter (fromChar, toChar)`
-1. `replaceCharacters (charMap)`
+1. [daysInMonthByNumber](exercises/branching-conditionals/daysInMonthByNumber)
+1. [letterGrade](exercises/branching-conditionals/letterGrade)
+1. [isValidTriangle](exercises/branching-conditionals/isValidTriangle)
+1. [triangleType](exercises/branching-conditionals/triangleType)
+1. [rockPaperScissorsWinner](exercises/branching-conditionals/rockPaperScissorsWinner)
 
 ## Patterns to Print
 
-1. `printSquare (lines)`
-1. `printHollowSquare (lines)`
-1. `printRightTriangle (lines)`
-1. `printHollowRightTriangle (lines)`
-1. `printPyramid (lines)`
-1. `printHollowPyramid (lines)`
-1. `printPlus (lines)`
-1. `multiplicationTable (n)`
+1. [printSolidSquare](exercises/patterns/printSolidSquare)
+1. [printSolidRightTriangle](exercises/patterns/printSolidRightTriangle)
+1. [printSolidPyramid](exercises/patterns/printSolidPyramid)
+1. [printHollowSquare](exercises/patterns/printHollowSquare)
+1. [printHollowRightTriangle](exercises/patterns/printHollowRightTriangle)
+1. [printHollowPyramid](exercises/patterns/printHollowPyramid)
+1. [printInvertedSolidRightTriangle](exercises/patterns/printInvertedSolidRightTriangle)
+1. [printMultiplicationTable](exercises/patterns/printMultiplicationTable)
+1. [printPlus](exercises/patterns/printPlus)
 
-## Numbers
+## Arrays
 
-1. `celciusToFahrenheit (temp)`
-1. `fahrenheitToCelcius (temp)`
-1. `getBMI (height, weight)`
-1. `power (base, exponent)`
-1. `remainderOf (a, b)`
-1. `sumOfRange (first, last)`
-1. `isPowerOfTwo (num)`
-1. `isPowerOf (num, base)`
-1. `isPerfectSquare (num)`
-1. `isPrime (num)`
-1. `factors (num)`
-1. `primeFactors (num)`
-1. `factorial (num)`
-1. `fibonacci (num)`
+1. [largest](exercises/arrays/largest)
+1. [smallest](exercises/arrays/smallest)
+1. [longest](exercises/arrays/longest)
+1. [shortest](exercises/arrays/shortest)
+1. [sum](exercises/arrays/sum)
+1. [mean](exercises/arrays/mean)
+1. [median](exercises/arrays/median)
+1. [product](exercises/arrays/product)
+1. [includes](exercises/arrays/includes)
+1. [firstIndexOf](exercises/arrays/firstIndexOf)
+1. [lastIndexOf](exercises/arrays/lastIndexOf)
+1. [countEvens](exercises/arrays/countEvens)
+1. [countOdds](exercises/arrays/countOdds)
+1. [countGreaterThan](exercises/arrays/countGreaterThan)
+1. [countLessThan](exercises/arrays/countLessThan)
+1. [countValue](exercises/arrays/countValue)
+1. [selectEvens](exercises/arrays/selectEvens)
+1. [selectOdds](exercises/arrays/selectOdds)
+1. [selectGreaterThan](exercises/arrays/selectGreaterThan)
+1. [selectLessThan](exercises/arrays/selectLessThan)
+1. [selectLongerThan](exercises/arrays/selectLongerThan)
+1. [selectShorterThan](exercises/arrays/selectShorterThan)
+1. [allPositive](exercises/arrays/allPositive)
+1. [anyPositive](exercises/arrays/anyPositive)
+1. [concat](exercises/arrays/concat)
+1. [removeEmpty](exercises/arrays/removeEmpty)
+1. [removeElement](exercises/arrays/removeElement)
+1. [selectAboveMean](exercises/arrays/selectAboveMean)
