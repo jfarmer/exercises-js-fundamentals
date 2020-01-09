@@ -22,6 +22,21 @@
 1. [fahrenheitToCelsius](exercises/numbers/fahrenheitToCelsius)
 1. [fibonacci](exercises/numbers/fibonacci)
 
+## Strings
+
+1. [countLetter](exercises/strings/countLetter)
+1. [capitalize](exercises/strings/capitalize)
+1. [longestWord](exercises/strings/longestWord)
+1. [shortestWord](exercises/strings/shortestWord)
+1. [replaceCharacter](exercises/strings/replaceCharacter)
+1. [replaceCharacters](exercises/strings/replaceCharacters)
+1. [toLowercase](exercises/strings/toLowercase)
+1. [toUppercase](exercises/strings/toUppercase)
+1. [toSnakeCase](exercises/strings/toSnakeCase)
+1. [toTitleCase](exercises/strings/toTitleCase)
+1. [rot13](exercises/strings/rot13)
+1. [rotN](exercises/strings/rotN)
+
 ## Branching / Conditionals
 
 1. [daysInMonthByNumber](exercises/branching-conditionals/daysInMonthByNumber)

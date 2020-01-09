@@ -9,7 +9,7 @@ function isPositive(num) {
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for isNegative:');
+  console.log('Running sanity checks for isPositive:');
 
   console.log(isPositive(0) === false);
   console.log(isPositive(1) === true);
