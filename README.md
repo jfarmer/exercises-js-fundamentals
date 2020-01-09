@@ -18,8 +18,8 @@
 1. [primeFactors](exercises/numbers/primeFactors)
 1. [sumOfRange](exercises/numbers/sumOfRange)
 1. [factorial](exercises/numbers/factorial)
-1. [celciusToFahrenheit](exercises/numbers/celciusToFahrenheit)
-1. [fahrenheitToCelcius](exercises/numbers/fahrenheitToCelcius)
+1. [celsiusToFahrenheit](exercises/numbers/celsiusToFahrenheit)
+1. [fahrenheitToCelsius](exercises/numbers/fahrenheitToCelsius)
 1. [fibonacci](exercises/numbers/fibonacci)
 
 ## Branching / Conditionals
