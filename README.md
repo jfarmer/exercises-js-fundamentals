@@ -1,5 +1,32 @@
 # JavaScript Exercises - Fundamentals
 
+This is a big collection of JavaScript exercises. Within each section, the exercises are roughly ordered from least to most difficult.
+
+We recommend doing the first 3-5 exercises in each section before doing deeper in any single section.
+
+If a particular concept isn't familiar to you, go read the relevant section in the [JavaScript crash course][github-intro-javascript].
+
+## Feedback
+
+Remember, the goal is not to nail every exercise, but to create good opportunities for feedback. That means:
+
+1. Devise a clear (but probably incomplete or mistaken) plan
+1. Implement that plan in code as best you can
+1. Get feedback from the computer, peers, and instructors
+1. Revise plan and repeat
+
+## JavaScript Crash Course Sections
+
+Here are some quick links to the different sections in the JavaScript crash course.
+
+- [JavaScript crash course homepage][github-intro-javascript]
+- [Numbers and Strings][intro-data]
+- [Variables][intro-variables]
+- [Conditionals][intro-conditionals]
+- [Arrays and Dictionaries][intro-collections]
+- [Looping][intro-looping]
+- [Functions][intro-functions]
+
 ## Numbers
 
 1. [isZero](exercises/numbers/isZero)
@@ -87,3 +114,11 @@
 1. [removeEmpty](exercises/arrays/removeEmpty)
 1. [removeElement](exercises/arrays/removeElement)
 1. [selectAboveMean](exercises/arrays/selectAboveMean)
+
+[github-intro-javascript]: https://github.com/jfarmer/intro-javascript
+[intro-data]: https://github.com/jfarmer/intro-javascript/tree/master/Data
+[intro-variables]: https://github.com/jfarmer/intro-javascript/tree/master/Variables
+[intro-conditionals]: https://github.com/jfarmer/intro-javascript/tree/master/Conditionals
+[intro-collections]: https://github.com/jfarmer/intro-javascript/tree/master/Collections
+[intro-looping]: https://github.com/jfarmer/intro-javascript/tree/master/Iteration
+[intro-functions]: https://github.com/jfarmer/intro-javascript/tree/master/Functions
