@@ -13,13 +13,9 @@ function countLetter(string, letter) {
 
   //for (let count = 0; count < countLetter.length; count += 1); {
    for (let i of string) {
-     //console.log(i)
-     //console.log(string)
-     //console.log(letter)
      if (i == letter) {
        count += 1
-     }
-     //console.log(count) 
+     } 
     } 
     return count
     }
