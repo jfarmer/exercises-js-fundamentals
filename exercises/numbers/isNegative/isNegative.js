@@ -5,7 +5,7 @@
  * @returns {boolean} True if num is negative and false otherwise
  */
 function isNegative(num) {
-  return _____;
+  return num < 0;
 }
 
 if (require.main === module) {
@@ -18,3 +18,4 @@ if (require.main === module) {
 }
 
 module.exports = isNegative;
+ 
