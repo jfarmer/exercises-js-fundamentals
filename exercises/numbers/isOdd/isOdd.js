@@ -15,7 +15,10 @@
  */
 function isOdd(num) {
   // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
+  return num % 2 != 0
+  
+  //Jesse I definitely want you to look at this one because
+  //I want to make sure that this is how you write the not equal to sign in JavaScript
 }
 
 if (require.main === module) {
