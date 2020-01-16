@@ -6,10 +6,15 @@
  */
 function celsiusToFahrenheit(temp) {
   // This is your job. :).
+  fahrenheit = (temp * 9/5) + 32
+  console.log(temp)
+  return fahrenheit
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for celsiusToFahrenheit:');
+console.log(celsiusToFahrenheit(23) === 73.4)
+console.log(celsiusToFahrenheit(100) === 212)
 
   // Your sanity checks go here.
 }
