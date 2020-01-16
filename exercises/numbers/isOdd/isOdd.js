@@ -15,7 +15,7 @@
  */
 function isOdd(num) {
   // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
+  return (num % 2 === 1) ;
 }
 
 if (require.main === module) {
