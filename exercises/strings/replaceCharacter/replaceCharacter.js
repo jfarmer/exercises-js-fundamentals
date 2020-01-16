@@ -14,13 +14,32 @@
 
 function replaceCharacter(string, target, replaceWith) {
   // This is your job. :)
+  let newestString = ' '
+
+  for (let letter of string) {
+    //to access the letter instead of the index USE "of"
+
+    //console.log(letter)
+    if (letter === target) {
+      //console.log('hey')
+      newestString = newestString + replaceWith
+      //console.log(newestString)
+    }
+    else {
+      newestString = newestString + letter
+    }
+  }
+  return newestString  
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for replaceCharacter:');
-
+console.log(replaceCharacter('hello', 'l', '8'))
+console.log(replaceCharacter('amsterdam', 'a', 'h'))
+console.log(replaceCharacter('ccc', 'c', 'a'))
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
 
 module.exports = replaceCharacter;
+
