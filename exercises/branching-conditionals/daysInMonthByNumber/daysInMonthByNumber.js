@@ -17,18 +17,29 @@
  */
 function daysInMonthByNumber(monthNum) {
   if (!Number.isInteger(monthNum) || monthNum < 1 || monthNum > 12) {
-    throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
+    console.log((`Expected a month number from 1-12, received: ${monthNum}`));
+    //is this how you wanted us to edit it ? or did you want us to keep the throw error ?
+    //the computer didn't recognize the language you used before the edit
   }
-
-  // This is your job. :)
+  if (monthNum === 1 || monthNum === 3 || monthNum === 5 || monthNum === 7 || monthNum === 8 || monthNum === 10 || monthNum === 12) {
+    return 31
+  }
+  if (monthNum === 2) {
+    return 28
+  }
+  if (monthNum === 4 || monthNum === 6 || monthNum === 9 || monthNum === 11) {
+    return 30
+  }
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isZero:');
 
-  console.log(daysInMonthByNumber(1) === _____);
-  console.log(daysInMonthByNumber(2) === _____);
-  console.log(daysInMonthByNumber(3) === _____);
+  console.log(daysInMonthByNumber(1) === 31);
+  console.log(daysInMonthByNumber(2) === 28);
+  console.log(daysInMonthByNumber(3) === 31);
+  console.log(daysInMonthByNumber(14));
 }
 
 module.exports = daysInMonthByNumber;
+
