@@ -5,7 +5,12 @@
  * @returns {boolean} True if num is negative and false otherwise
  */
 function isNegative(num) {
-  return _____;
+  if (num < 0) {
+    return true
+  }
+  else {
+    return false
+  }
 }
 
 if (require.main === module) {
@@ -15,6 +20,9 @@ if (require.main === module) {
   console.log(isNegative(1) === false);
   console.log(isNegative(-1) === true);
   console.log(isNegative(-100.20) === true);
+  console.log(isNegative(2))
+  //don't forget that it prints true because the statements run as true because they are correct
 }
 
 module.exports = isNegative;
+
