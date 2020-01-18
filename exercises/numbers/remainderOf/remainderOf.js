@@ -15,7 +15,7 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is even and false otherwise
  */
-function remainderOf(num) {
+function remainderOf(n, d) {
   /*
     This is your job. :)
 
