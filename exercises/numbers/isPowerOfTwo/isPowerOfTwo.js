@@ -20,13 +20,37 @@
  */
 function isPowerOfTwo(num) {
   // Your code here
-  // Remember, you can assume that num is a positive integer.
+  let power = 2;
+  let exp=0;
+  let number = power**exp;
+  while (number <= num){
+ 
+  if(power**exp===num){
+    return true;
+  }
+  else{
+    number = power**exp
+    exp++;
+  }
+  
+    
+  
+ 
 }
+return false;
+}
+
 
 if (require.main === module) {
   console.log('Running sanity checks for isPowerOfTwo:');
 
-  // Your sanity checks here.
+  console.log(isPowerOfTwo(8));
+  console.log(isPowerOfTwo(32));
+  
+
+   console.log(isPowerOfTwo(49) === false);
+   console.log(isPowerOfTwo(36) === false);
+   console.log(isPowerOfTwo(64) === true);
 }
 
 module.exports = isPowerOfTwo;
