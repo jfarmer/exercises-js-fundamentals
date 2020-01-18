@@ -20,12 +20,21 @@ function isPrime(num) {
     and use pen/paper, index cards, etc. — anything that helps you think
     about it without getting stuck in JavaScript syntax.
   */
+
+ for(var i = 2; i < num; i++) {//need to start at 2 because 1 goes into every prime. 
+                                //The code will stop when the i value is larger than num ;
+  if(num % i === 0) {
+      return false;
+  }
 }
+return num > 1; //true if prime 
+}
+
 
 if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
-  console.log(isPrime(1) === false);
+  console.log(isPrime(12) === false);
   console.log(isPrime(2) === true);
   console.log(isPrime(4) === false);
 
