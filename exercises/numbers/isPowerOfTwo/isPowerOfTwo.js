@@ -1,22 +1,23 @@
 /**
- * Given a non-negative integer as input, returns `true` if input is a power of `2` and `false` otherwise.
+ * Given a non-negative integer as input, returns `true` if input is a power
+ * of `2` and `false` otherwise.
  *
- * A number is a power of `2` if it can be written as `2**k` for some positive integer `k`, where "`**`"
- * represents the exponentiation operator.
+ * A number is a power of `2` if it can be written as `2**k` for some non-negative
+ * integer `k`, where "`**`" represents the exponentiation operator.
  *
- * For example, since `8` equals `2 * 2 * 2`, which is `2**3`, then `8` is a power of `2`.
- * Conversely, `81` is not a power of `2` since there's no integer `k` such that `81 === 2**k`.
- *
- * However, `81` _is_ a power of `3` since `81 === 3**4`.
+ * For example, `8` is a power of `2` since `8` equals `2 * 2 * 2 === 2**3`.
+ * Conversely, `81` is not a power of `2` since there's no integer `k` such
+ * that `81 === 2**k`.
  *
  * @example
- * isPowerOf(2, 2) // => true
- * isPowerOf(3, 3) // => true
- * isPowerOf(10, 2) // => false
+ * isPowerOfTwo(2) // => true
+ * isPowerOfTwo(3) // => false
+ * isPowerOfTwo(4) // => true
+ * isPowerOfTwo(2**20) // => true
+ * isPowerOfTwo(2**20 + 1) // => false
  *
- * @param {number} n - The number
- * @param {number} b - The base
- * @returns {boolean} True if the number is a power of the base, false otherwise.
+ * @param {number} num - The number
+ * @returns {boolean} True if the number is a power of 2, false otherwise.
  */
 function isPowerOfTwo(num) {
   // Your code here
@@ -25,6 +26,14 @@ function isPowerOfTwo(num) {
 
 if (require.main === module) {
   console.log('Running sanity checks for isPowerOfTwo:');
+
+  // Is 0 a power of two? Is 1?
+  // console.log(isPowerOf(0) === _____);
+  // console.log(isPowerOf(1) === _____);
+
+  console.log(isPowerOfTwo(2) === true);
+  console.log(isPowerOfTwo(3) === false);
+  console.log(isPowerOfTwo(4) === true);
 
   // Your sanity checks here.
 }
