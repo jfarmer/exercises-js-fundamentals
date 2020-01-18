@@ -21,16 +21,8 @@ function daysInMonthByNumber(monthNum) {
     //is this how you wanted us to edit it ? or did you want us to keep the throw error ?
     //the computer didn't recognize the language you used before the edit
   }
-  if (monthNum === 1 || monthNum === 3 || monthNum === 5 || monthNum === 7 || monthNum === 8 || monthNum === 10 || monthNum === 12) {
-    return 31
-  }
-  if (monthNum === 2) {
-    return 28
-  }
-  if (monthNum === 4 || monthNum === 6 || monthNum === 9 || monthNum === 11) {
-    return 30
-  }
-}
+  months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  return months[monthNum - 1]
 
 if (require.main === module) {
   console.log('Running sanity checks for isZero:');
