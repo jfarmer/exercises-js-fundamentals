@@ -13,7 +13,19 @@
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
 function isMultipleOf(n, d) {
-  return _____;
+
+   if(n===0){//zero is a multiple of every number, but no number is a multiple of zero
+      return false;
+
+    }
+  if(n%d===0){
+   
+    return true;
+  
+  }
+  else{
+    return false;
+  }
 }
 
 if (require.main === module) {
