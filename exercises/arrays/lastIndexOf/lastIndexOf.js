@@ -18,9 +18,9 @@
 function lastIndexOf(haystack, needle) {
   let index = 0;
 
-  for (let i in haystack) {
-    if (haystack[i] === needle) {
-      index = i
+  for (let hay in haystack) {
+    if (haystack[hay] === needle) {
+      index = hay
     }
   }
   return index
