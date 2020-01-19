@@ -16,14 +16,25 @@
  *  array, or -1 if it's not found.
  */
 function lastIndexOf(haystack, needle) {
-  // This is your job. :)
+  let index = 0;
+
+  for (let i in haystack) {
+    if (haystack[i] === needle) {
+      index = i
+    }
+  }
+  return index
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for lastIndexOf:');
-
+  console.log(lastIndexOf([10, 20, 30, 20], 20)); // => 1
+  console.log(lastIndexOf([10, 20, 30, 20], 17)); // => -1
+  console.log(lastIndexOf(['giraffe', 'giraffe', 'banana'], 'giraffe')); // => 0
+  console.log(lastIndexOf(['giraffe', 'giraffe', 'banana'], 'banana')); // => 2
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
 
 module.exports = lastIndexOf;
+
