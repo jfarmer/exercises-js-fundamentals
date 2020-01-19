@@ -16,9 +16,9 @@
 function selectEvens(array) {
   let finalArray = [];
 
-  for (i of array) {
+  for (number of array) {
     //console.log(i) }
-    if (i % 2 === 0) {
+    if (number % 2 === 0) {
       finalArray.push(i)
     }
   }
