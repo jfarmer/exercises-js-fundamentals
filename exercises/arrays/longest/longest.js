@@ -10,10 +10,10 @@ function longest(array) {
   let largest = 0;
   let largestString;
 
-  for (i of array) {
-    if (i.length > largest) {
-      largest = i.length //im asking for the length and i just made the variable a word
-      largestString = i
+  for (string of array) {
+    if (string.length > largest) {
+      largest = string.length //im asking for the length and i just made the variable a word
+      largestString = string
     }
   }
   return largestString
