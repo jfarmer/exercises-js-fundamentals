@@ -10,15 +10,18 @@
  * @returns {string} A capitalized copy of the string
  */
 
-function capitalize(num) {
-  // This is your job. :)
+function capitalize(word) {
+
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-if (require.main === module) {
-  console.log('Running sanity checks for capitalize:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+if (require.main === module) {
+  console.log('Running sanity checks for capitalize:'); 
+  console.log(capitalize('world') == 'World');
+  console.log(capitalize('dog') == 'Dog');
+  console.log(capitalize('oops') == 'Oops');
+  console.log(capitalize('w') == 'W');
 }
 
 module.exports = capitalize;
