@@ -11,41 +11,31 @@
  * @returns {boolean} True if num is prime and false otherwise
  */
 function isPrime(num) {
-  /*
-    Your code goes here.
+  
+  if (num === 1 || num === 2) {
+    return true
+  }
+  if (num % 2 === 0) {
+    return false
+  }
 
-    Work out one version that works and don't worry about performance.
-
-    If you're having trouble working it out in code, step out of JS-land
-    and use pen/paper, index cards, etc. — anything that helps you think
-    about it without getting stuck in JavaScript syntax.
-  */
- let factors = 0;
-
- for (eachNumber = 1; eachNumber <= num; eachNumber += 1); { 
-  primeCheck = num % eachNumber
-   if (primeCheck === 0) {
-     factors += 1
+  for (eachNumber = 3; eachNumber < num; eachNumber += 2); { 
+   //console.log(eachNumber)
+   if (num % eachNumber === 0)
+     return false
    }
- }
- if (factors > 2) {
-   return false
- }
- else {
-  return true;
- }
-}
-//i know this isn't right, but this is the logic I had behind the way to approach this
+   return true
+  } 
 
 if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
-  console.log(isPrime(1) === false);
+  console.log(isPrime(1) === true);
   console.log(isPrime(2) === true);
   console.log(isPrime(4) === false);
-  console.log(isPrime(200) === false)
-
-  // Your own sanity checks go here
+  console.log(isPrime(412) === false);
+  console.log(isPrime(16) === false);
+  console.log(isPrime(40447937) === false);
 }
 
 module.exports = isPrime;
