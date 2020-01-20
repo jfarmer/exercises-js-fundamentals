@@ -22,14 +22,29 @@
  * @returns {number} The fibonacci of num
  */
 function fibonacci(n) {
-  // This is your job. :)
+  let fib = [0, 1, 1];
+  let sum;
+  if(n === 0)
+    { sum = 0}
+  else if (n === 1)
+    { sum = 1}
+  else
+  { for(i=2;i<=n;i++)
+     { fib.push(fib[i] + fib[i-1]);
+     }
+     sum = fib[n];
+  }
+ return sum;
 }
+
+
 
 if (require.main === module) {
   console.log('Running sanity checks for fibonacci:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(fibonacci(0) === 0);
+  console.log(fibonacci(1) === 1);
+  console.log(fibonacci(10) === 55);
+  console.log(fibonacci(12) === 144);
 }
 
 module.exports = fibonacci;
