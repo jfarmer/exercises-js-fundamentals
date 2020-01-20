@@ -19,8 +19,8 @@
  * @returns {boolean} True if the array contains the value, false otherwise.
  */
 function includes(haystack, needle) {
-  for (i of haystack) {
-    if (i === needle) {
+  for (hay of haystack) {
+    if (hay === needle) {
       return true;
     }
     
