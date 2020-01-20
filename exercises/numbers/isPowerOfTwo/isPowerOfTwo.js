@@ -27,7 +27,7 @@ while(num > test)
 }
 
 if(num === 0)
-{return true}
+{return false}
 else if(test === num)
 {return true}
 else {return false}
@@ -35,7 +35,7 @@ else {return false}
 
 if (require.main === module) {
   console.log('Running sanity checks for isPowerOfTwo:');
-  console.log(isPowerOfTwo(0) === true);
+  console.log(isPowerOfTwo(0) === false);
   console.log(isPowerOfTwo(2) === true);
   console.log(isPowerOfTwo(32) === true);
   console.log(isPowerOfTwo(256) === true);
