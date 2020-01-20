@@ -16,11 +16,21 @@
  * @returns {number} The number of elements in the array greater than threshold
  */
 function countGreaterThan(array, threshold) {
-  // This is your job. :)
+  let count= 0;
+  for(let i of array){
+    //console.log(i);
+    if(i>threshold){
+      count++;
+    }
+  }
+  return count;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countGreaterThan:');
+  console.log(countGreaterThan([1,2,5,8,7,43,45],6)==4);
+  console.log(countGreaterThan([1,2,5,8,7,43,45],1)==6);
+
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
