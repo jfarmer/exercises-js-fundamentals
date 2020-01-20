@@ -11,16 +11,11 @@
  * @returns {number} The base raised to the power of the exopnent
  */
 function power(base, exponent) {
-  /*
-    Your code goes here.
-
-    Remember, exponent is a _positive integer_.
-
-    JavaScript has a built-in Math.pow function; don't use it!
-    Write your own version. Remember, exponent is guaranteed to be a positive integer.
-
-    That means you don't have to deal with, e.g., power(2, 1.5).
-  */
+  let number = 1;
+  for(i = 1; i <= exponent; i++)
+  { number *= base;
+  }
+  return number;
 }
 
 if (require.main === module) {
@@ -33,8 +28,8 @@ if (require.main === module) {
   console.log(power(-1, 2) === 1);
   console.log(power(-1, 3) === -1);
 
-  // Your sanity checks go here
-  // What should happen if base is 0? If exponent is 0?
+  console.log(power(2, 3) === 8);
+  console.log(power(5, 6) === 15625);
 }
 
 module.exports = power;
