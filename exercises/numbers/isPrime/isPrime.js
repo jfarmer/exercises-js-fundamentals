@@ -11,25 +11,29 @@
  * @returns {boolean} True if num is prime and false otherwise
  */
 function isPrime(num) {
-  /*
-    Your code goes here.
+  let i = 1;
+  while(i < num)
+  {i++;
+    if(num === 2)
+    {return true}
+    else if(num%i === 0)
+    {return false}
+    else {return true}
+    }
 
-    Work out one version that works and don't worry about performance.
-
-    If you're having trouble working it out in code, step out of JS-land
-    and use pen/paper, index cards, etc. — anything that helps you think
-    about it without getting stuck in JavaScript syntax.
-  */
+  
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
-  console.log(isPrime(1) === false);
+  console.log(isPrime(5));
+
+  
   console.log(isPrime(2) === true);
   console.log(isPrime(4) === false);
-
-  // Your own sanity checks go here
+  console.log(isPrime(5) === true);
+  console.log(isPrime(7) === true);
 }
 
 module.exports = isPrime;
