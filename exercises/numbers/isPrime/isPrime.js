@@ -20,7 +20,22 @@ function isPrime(num) {
     and use pen/paper, index cards, etc. — anything that helps you think
     about it without getting stuck in JavaScript syntax.
   */
+ let factors = 0;
+
+ for (eachNumber = 1; eachNumber <= num; eachNumber += 1); { 
+  primeCheck = num % eachNumber
+   if (primeCheck === 0) {
+     factors += 1
+   }
+ }
+ if (factors > 2) {
+   return false
+ }
+ else {
+  return true;
+ }
 }
+//i know this isn't right, but this is the logic I had behind the way to approach this
 
 if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
@@ -28,8 +43,10 @@ if (require.main === module) {
   console.log(isPrime(1) === false);
   console.log(isPrime(2) === true);
   console.log(isPrime(4) === false);
+  console.log(isPrime(200) === false)
 
   // Your own sanity checks go here
 }
 
 module.exports = isPrime;
+
