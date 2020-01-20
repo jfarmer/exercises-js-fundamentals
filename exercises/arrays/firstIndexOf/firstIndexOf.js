@@ -16,11 +16,20 @@
  *  array, or -1 if it's not found.
  */
 function firstIndexOf(haystack, needle) {
+  for(let i in haystack){
+    //console.log(i);
+    if(haystack[i]===needle){
+      return i;
+    }
+  }
+  return -1;
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for firstIndexOf:');
+  console.log(firstIndexOf([11, 20, 30, 20], 19)==-1);
+  console.log(firstIndexOf([11, 20, 30, 20], 20)==1);
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
