@@ -36,4 +36,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = isOdd;
+module.exports = isOdd; 
