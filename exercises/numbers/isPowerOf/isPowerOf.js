@@ -18,21 +18,36 @@
  * @param {number} num - The input number
  * @returns {boolean} True if input is a power of 2 and false otherwise.
  */
-function isPowerOf(num) {
-  // Your code here
-  // Remember, you can assume that num is a positive integer.
+function isPowerOf(n, b) {
+let i = 1;
+while(i<n)
+{
+if(n = b**i)
+  {return true}
+else
+  i = i + 1;
+}
+
+if(n === 0)
+{return false}
+else if(n === 1)
+{return false}
+else if(n === b)
+{return true}
+else {return false}
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isPowerOf:');
 
   // Is 0 a power of two? Is 1?
-  console.log(isPowerOf(0) === _____);
-  console.log(isPowerOf(1) === _____);
+  console.log(isPowerOf(0,2) === false);
+  console.log(isPowerOf(1,2) === false);
 
-  console.log(isPowerOf(2) === true);
-  console.log(isPowerOf(3) === false);
-  console.log(isPowerOf(4) === true);
+  console.log(isPowerOf(8,2) === true);
+  console.log(isPowerOf(9,3) === true);
+  console.log(isPowerOf(9,4) === true);
+  console.log(isPowerOf(144,12) === true);
 }
 
 module.exports = isPowerOf;
