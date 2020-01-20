@@ -14,11 +14,35 @@
  * @return {string} The corresponding letter grade for the given percentage grade
  */
 function letterGrade(percentGrade) {
-  // This is your job. :)
-}
+  if(percentGrade<60){
+    return "F";}
 
+  if(percentGrade>73 & percentGrade < 77){
+    return "C";}
+
+
+  if(percentGrade>76 & percentGrade < 80){
+    return "C+";}
+
+  if(percentGrade>80 & percentGrade < 83){
+    return 'B-';
+
+  }
+  if(percentGrade>82 & percentGrade < 87){
+    return "B";}
+
+if(percentGrade>86 & percentGrade < 90){
+  return "B+";}
+
+if(percentGrade>89 & percentGrade < 95){
+  return "A-";}
+if(percentGrade>94 & percentGrade < 101){
+  return "A+";}
+}
 if (require.main === module) {
   console.log('Running sanity checks for letterGrade:');
+  console.log(letterGrade(50)=='F');
+  console.log(letterGrade(85)=='B');
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
