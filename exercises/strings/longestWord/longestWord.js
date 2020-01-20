@@ -8,14 +8,22 @@
  */
 
 function longestWord(string) {
-  // This is your job. :)
+  var words = string.split('');
+  console.log(words);
+  const compare = [];
+  for(j=0;j<length.words;j++)
+  {
+  let i = words.findIndex(' ')
+  j++;
+   let word = array.slice(i);
+
+  }
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for longestWord:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(longestWord('It is complicated') === 'complicated')
+  console.log(longestWord('Video killed the radio star') === 'killed')
 }
 
 module.exports = longestWord;
