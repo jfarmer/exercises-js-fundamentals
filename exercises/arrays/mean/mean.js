@@ -19,14 +19,32 @@
  * @returns {number} The mean of the numbers in the array
  */
 function mean(array) {
-  // This is your job. :)
+  let sumOfNumber = 0
+  let averageOfNumber = 0
+
+  if (array.length <= 1) {
+    return array[0]
+    //Jesse, I tried to set this up for situations where array is not iterable
+    //but it still did not work, how else would I look at this scenario?
+  }
+  
+  for (number of array) {
+    sumOfNumber += number
+  }
+  averageOfNumber = sumOfNumber / array.length
+  
+  if (averageOfNumber === 0) {
+    return 0
+  }
+  return averageOfNumber 
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for mean:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(mean([30, 10, 20]) === 20)
+  console.log(mean([-10, 10]) === 0)
+  console.log(mean([1] === 1))
+  
 }
 
 module.exports = mean;
