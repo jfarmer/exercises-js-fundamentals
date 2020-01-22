@@ -9,14 +9,23 @@
  * @returns {number} The product of the numbers in the array
  */
 function product(array) {
-  // This is your job. :)
+  let productOfNumbers = 1;
+
+  for (let number of array) {
+   productOfNumbers = productOfNumbers * number 
+  }
+  return productOfNumbers
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for product:');
-
+  console.log(product([2, 2, 2]) === 8);
+  console.log(product([0, 2, 3]) === 0);
+  console.log(product([1, 5, 10]) === 50);
+  //make sure to put the parantheses BEFORE the equal sign!!!
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
 
 module.exports = product;
+
