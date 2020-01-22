@@ -1,50 +1,35 @@
 /**
- * Given an array of numbers, return their mean. We use "mean" instead of
- * average because "average" can mean many things — mean, median, or mode —
- * while mean only ever means one thing.
- *
- * The mean of three numbers a,b,c is (a + b + c) / 3.
- *
- * The mean of four numbers a,b,c,d is (a + b + c + d) / 4.
- *
- * etc.
- *
- * See https://en.wikipedia.org/wiki/Arithmetic_mean
- *
  * @example
- * mean([30, 10, 20]); // => 20 (i.e., (30 + 10 + 20) / 3)
- * mean([-10, 10]); // => 0 (i.e., (-10 + 10) / 2)
+ * median([900, 10, 20]); // => 20 since 20 is the middle element
+ * mean([-10, 20, 400, 10]); // => 15 since 10,20 are the middle elements
  *
  * @param {number[]} array - An array of numbers
- * @returns {number} The mean of the numbers in the array
+ * @returns {number} The median of the numbers in the array
  */
-function mean(array) {
-  let sumOfNumber = 0
-  let averageOfNumber = 0
-
-  if (array.length <= 1) {
-    return array[0]
-    //Jesse, I tried to set this up for situations where array is not iterable
-    //but it still did not work, how else would I look at this scenario?
-  }
+function median(array) {
   
   for (number of array) {
-    sumOfNumber += number
+    if (array.length % 2 === 0) {
+      halfPoint = array.length / 2
+      median = (array[halfPoint -1] + array[halfPoint]) / 2
+      //has to be -1 because the way index works and starts at 0
+    }
+    else {
+      halfPoint = array.length / 2
+      halfPoint = (array.length - 1) / 2
+      median = array[halfPoint]
+      //console.log(halfPoint)
+    }
   }
-  averageOfNumber = sumOfNumber / array.length
-  
-  if (averageOfNumber === 0) {
-    return 0
-  }
-  return averageOfNumber 
+  return median
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for mean:');
-  console.log(mean([30, 10, 20]) === 20)
-  console.log(mean([-10, 10]) === 0)
-  console.log(mean([1] === 1))
+  console.log('Running sanity checks for median:');
+  console.log(median([1, 2, 3, 4, 5]));
+  console.log(median([1, 2, 3, 4]))
   
 }
 
-module.exports = mean;
+module.exports = median;
+
