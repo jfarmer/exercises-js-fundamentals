@@ -21,19 +21,17 @@
 function median(array) {
   let medianNumber = 0
 
-  for (number of array) {
-    if (array.length % 2 === 0) {
-      halfPoint = array.length / 2
-      medianNumber = (array[halfPoint - 1] + array[halfPoint]) / 2
+  if (array.length % 2 === 0) {
+    halfPoint = array.length / 2
+    medianNumber = (array[halfPoint - 1] + array[halfPoint]) / 2
       //has to be -1 because the way index works and starts at 0
-    }
-    else {
-      halfPoint = (array.length - 1) / 2
-      medianNumber = array[halfPoint]
-    }
+  } else {
+    halfPoint = (array.length - 1) / 2
+    medianNumber = array[halfPoint]
+    } 
+    return medianNumber
   }
-  return medianNumber
-}
+ 
 
 if (require.main === module) {
   console.log('Running sanity checks for median:');
@@ -45,4 +43,3 @@ if (require.main === module) {
 }
 
 module.exports = median;
-
