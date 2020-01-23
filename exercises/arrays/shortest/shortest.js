@@ -1,20 +1,22 @@
-/**
- * Given an array, returns the shortest element in the array.
- *
- * Assume the array contains only strings.
- *
- * @param {string[]} array - The input array
- * @returns {number} The shortest string in the array
- */
+
 function shortest(array) {
-  // This is your job. :)
+  let shortestSoFar = array[0];
+
+  for (let string of array) {
+    if (string.length < shortestSoFar) {
+      shortestSoFar = string;
+    }
+  }
+  return shortestSoFar;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for shortest:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(shortest(['hi', 'hello', 'mynameischloe']) === 'hi');
+  console.log(shortest(['keith', 'christos', 'rachel']) === 'keith')
+  console.log(shortest(['1', '2']))
+  //Jesse I think it doesn't account for when the strings are the same length. How might I do this?
 }
 
 module.exports = shortest;
+
