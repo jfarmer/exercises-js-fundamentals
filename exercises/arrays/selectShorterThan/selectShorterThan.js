@@ -5,28 +5,30 @@
  *
  * Return an empty array if no such strings exist.
  *
- * @example
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 0); // => []
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 1); // => ['']
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 2); // => ['', 'c']
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 3); // => ['', 'bb', 'c']
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 4); // => ['', 'aaa', 'bb', 'c']
- * selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 5); // => ['', 'aaa', 'bb', 'c', 'dddd']
- *
  * @param {string[]} array - An array of strings
  * @param {number} threshold - A length threshold
  * @returns {string[]} An array of all strings in the input array with length
  *  strictly less the given threshold
  */
 function selectShorterThan(array, threshold) {
-  // This is your job. :)
+  let finalArray = [];
+
+  for (string of array) {
+    if (string.length < threshold) {
+      finalArray.push(string)
+    }
+  }
+  return finalArray
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for selectShorterThan:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 0)); // => []
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 1)); // => ['']
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 2)); // => ['', 'c']
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 3)); // => ['', 'bb', 'c']
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 4)); // => ['', 'aaa', 'bb', 'c']
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 5)); // => ['', 'aaa', 'bb', 'c', 'dddd']
 }
 
 module.exports = selectShorterThan;
