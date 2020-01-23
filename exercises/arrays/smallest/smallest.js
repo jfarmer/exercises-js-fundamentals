@@ -1,11 +1,4 @@
-/**
- * Given an array, returns the smallest element in the array.
- *
- * Assume the array contains only numbers.
- *
- * @param {number[]} array - The input array
- * @returns {number} The smallest element in the array
- */
+
 function smallest(array) {
   let smallestSoFar = array[0];
 
