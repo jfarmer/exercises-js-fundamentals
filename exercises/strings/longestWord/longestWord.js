@@ -1,21 +1,22 @@
-/**
- * Given an input string, returns the longest word contained in the string.
- *
- * For our purposes, assume words are always separated by a single space.
- *
- * @param {string} string - The input string
- * @returns {string} The longest word in the input string
- */
 
 function longestWord(string) {
-  // This is your job. :)
+  let splitString = string.split(' ')
+  let longestWordSoFar = splitString[0].length
+
+  for (element of splitString) {
+    if (element.length > longestWordSoFar) {
+      longestWordSoFar = element 
+    }
+  }
+  return longestWordSoFar
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for longestWord:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(longestWord('this sentence is long') === 'sentence')
+  console.log(longestWord('it took me long to find my example was wrong') === 'example')
+  console.log(longestWord("I really need to get that in my head") === 'really')
 }
 
 module.exports = longestWord;
+
