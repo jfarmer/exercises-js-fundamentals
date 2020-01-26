@@ -1,29 +1,28 @@
-/**
- * Given an input string, returns a copy of the string with all-uppercase letters.
- *
- * Don't use JavaScript's built-in string.toUpperCase
- *
- * Only worry about characters in the ASCII range: http://www.asciitable.com/
- *
- * Do nothing to characters that have no corresponding uppercase character, e.g.,
- * don't do anything special for a space, a number, a dash, etc.
- *
- * @example
- * toUpperCase('HelLo fRiends!'); // => 'HELLO FRIENDS!'
- *
- * @param {string} string - The string to replace a character in
- * @returns {string} A uppercase copy of the input string
- */
-
 function toUpperCase(string) {
-  // This is your job. :)
+  let upperCaseString = ''
+  
+  for (character of string) {  
+    let newAscii = character.charCodeAt(string)
+  
+      if (character.charCodeAt(string) >= 97 && character.charCodeAt(string) <= 122) {
+        newAscii = Number(character.charCodeAt(string)) - 32
+        //have to do this as a number so it knows to subtract from the code number
+        upperCaseString = upperCaseString + String.fromCharCode(newAscii)
+        //use the string to know the string at that code
+      }
+      else {
+        upperCaseString = upperCaseString + character
+    }
+  }
+  console.log(upperCaseString)
+  return upperCaseString
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for toUpperCase:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log('Running sanity checks for toLowerCase:');
+  console.log(toUpperCase('Hi tHeRe') === "HI THERE")
+  console.log(toUpperCase('my name is chloe') === 'MY NAME IS CHLOE')
 }
 
 module.exports = toUpperCase;
+
