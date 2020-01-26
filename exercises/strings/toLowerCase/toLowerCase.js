@@ -1,29 +1,27 @@
-/**
- * Given an input string, returns a copy of the string with all-lowercase letters.
- *
- * Don't use JavaScript's built-in string.toLowerCase
- *
- * Only worry about characters in the ASCII range: http://www.asciitable.com/
- *
- * Do nothing to characters that have no corresponding lowercase character, e.g.,
- * don't do anything special for a space, a number, a dash, etc.
- *
- * @example
- * toLowerCase('HelLo fRiends!'); // => 'hello friends!'
- *
- * @param {string} string - The string to replace a character in
- * @returns {string} A lowercase copy of the input string
- */
-
 function toLowerCase(string) {
-  // This is your job. :)
+  let lowerCaseString = ''
+  
+  for (character of string) {  
+    let newAscii = character.charCodeAt(string)
+  
+      if (character.charCodeAt(string) >= 65 && character.charCodeAt(string) <= 90) {
+        newAscii = Number(character.charCodeAt(string)) + 32
+        //have to do this as a number so it knows to subtract from the code number
+        lowerCaseString = lowerCaseString + String.fromCharCode(newAscii)
+        //use the string to know the string at that code
+      }
+      else {
+        lowerCaseString = lowerCaseString + character
+    }
+  }
+  //console.log(lowerCaseString)
+  return lowerCaseString
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for toLowerCase:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(toLowerCase('Hi tHeRe') === "hi there")
+  console.log(toLowerCase('MY NAME IS CHLOE') === 'my name is chloe')
 }
 
 module.exports = toLowerCase;
