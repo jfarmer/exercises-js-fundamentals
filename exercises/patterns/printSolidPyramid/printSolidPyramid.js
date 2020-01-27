@@ -3,7 +3,8 @@ let helpers = require('../printHelpers');
 function printSolidPyramid(height) {
 
  let counter = 1
-  for (let i = 1; i <= height; i++) {
+  
+ for (let i = 1; i <= height; i++) {
     let numSpaces = height - i;
     let numChars = counter 
     counter += 2
