@@ -45,7 +45,6 @@ function printSolidPyramid(height) {
     helpers.printNewLine();
   }
 }
-
 /**
  * For testing purposes, prints a diagram of the given height.
  */
