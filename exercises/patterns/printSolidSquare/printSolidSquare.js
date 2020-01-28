@@ -31,6 +31,7 @@ function printSolidSquare(height) {
     Reflect: given `height`...
     1. How many lines to we want to print?
     2. How many characters should be on each line?
+    3. How many of each?.
   */
   for (let i = 0; i < height; i++) {
     let numChars = height;
