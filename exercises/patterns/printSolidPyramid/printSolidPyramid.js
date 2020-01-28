@@ -32,12 +32,11 @@ function printSolidPyramid(height) {
     Reflect: given `height`...
     1. How many lines to we want to print?
     2. How many spaces are start a given line, followed by how many # characters?
-
     Work through 3-4 examples by hand and try to notice a pattern.
   */
   for (let i = 0; i < height; i++) {
-    let numSpaces = _____;
-    let numChars = _____;
+    let numSpaces = height-i;
+    let numChars = 2*i+1;
 
     helpers.printCountTimes(' ', numSpaces);
     helpers.printCountTimes('#', numChars);
