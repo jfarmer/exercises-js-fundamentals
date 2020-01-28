@@ -27,11 +27,17 @@ let helpers = require('../printHelpers');
  * @param {number} height - The height of the square to print
  */
 function printHollowSquare(height) {
-  for (let i = 0; i < height; i++) {
-    // This is your job. :)
 
+  helpers.printCountTimes('#', height);
+  helpers.printNewLine();
+  for (let i = 0; i < height-1; i++) {
+    helpers.printCountTimes('#', 1);
+    helpers.printCountTimes(' ', height-2);
+    helpers.printCountTimes('#', 1);
     helpers.printNewLine();
   }
+  //helpers.printNewLine();
+  helpers.printCountTimes('#', height);
 }
 /**
  * For testing purposes, prints a diagram of the given height.
