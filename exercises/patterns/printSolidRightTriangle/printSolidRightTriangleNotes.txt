@@ -1,0 +1,71 @@
+notes on printSolidRightTriangle
+
+first trial code:
+for (let i = 0; i < height; i++) {
+    let numCharsSpace = height - 1;
+    let numChars = height - numCharsSpace
+
+    helpers.printCountTimes('#', numChars);
+    helpers.printNewLine();
+    helpers.printCountTimes(' ', numCharsSpace);
+    helpers.printNewLine();
+
+results: 
+    printed one character on one line 
+    printed one space after the one character 
+    continuted for a number of lines defined by height 
+
+second trial code:
+for (let i = 0; i < height; i++) {
+    let numCharsSpace = height - 1;
+    let numChars = height - numCharsSpace
+
+    helpers.printCountTimes('#', numChars);
+    helpers.printNewLine();
+
+results:
+    same as the first trial, minus the printed spaces in between character lines
+
+third trial code:
+for (let i = 0; i < height; i++) {
+    let numChars = height - 1
+
+    helpers.printCountTimes('#', numChars);
+    helpers.printNewLine();
+
+predictions: won't work for height = 1, would print a solid square
+for every other number that's just height-1
+    prediction was right expect it did print for 1? i think it's because
+    of the counter set at i=0
+
+what am i missing:
+    i need a way to tell the code to type a certain number of spaces
+    and then the character
+
+fourth trial code:
+for (let i = 0; i < height; i++) {
+  let numCharsSpace = height - 1;
+  let numChars = height - numCharsSpace
+
+  helpers.printCountTimes('#', numChars);
+  helpers.printCountTimes(' ', numCharsSpace);
+  helpers.printNewLine();
+
+results:
+    got rid of the extra space that was between the characters 
+    in the first trial
+
+    now, i need to introduce a counter that will have it increase 
+    by 1 for each suquential line
+
+    create a new variable called line number?
+
+i feel like i'm overcomplicating this tbh
+    do i really need to have another variable for the number
+    of spaces
+    it doesn't even matter how many spaces I put in because
+    you wouldn't even be able to see it
+    ugh i'm fucking up i think. time to rethink
+
+OKAY REALLY GOOD THOUGHT: WHAT IF I JUST DEFINED THIS IN TERMS
+OF i INSTEAD OF THE HEIGHT AAAAAAHHHH THAT MIGHT DO IT
