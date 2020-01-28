@@ -1,0 +1,80 @@
+notes on printSolidPyramid
+
+the number of characters goes up in odd numbers
+    1 - 1
+    2 - 3
+    3 - 5
+    4 - 7
+    5 - 9
+    6 - 11
+to make it centered, there's one space on each side 
+
+first trial code:
+for (let i = 0; i < height; i++) {
+    let numChars = i*2-1;
+
+    helpers.printCountTimes([' ','#', numChars, ' ']);
+    helpers.printNewLine();
+  }
+
+results:
+    it printed nothing lol. i think my print statement is just a bit complicated
+
+what i want to do:
+    the number of characters is just 2n-1
+    i want to create an array that as the spaces at the beginning and ending
+
+realization: this is more complex than i originally thought
+    the array thing won't work because the number of spaces is not consistent
+    **created grid in notebook that shows this
+
+realization 2: 
+    as the number of characters increases by every odd number (2n-1),
+    the number of spaces is decreasing by every even number
+
+second trial code:
+for (let i = 0; i < height; i++) {
+    let numSpaces = 2*i-2;
+    let numChars = 2*i-1;
+
+    helpers.printCountTimes(' ', numSpaces);
+    helpers.printCountTimes('#', numChars);
+    helpers.printNewLine();
+  }
+
+results:
+    it's printing the right number of spaces and characters
+    the spaces are just all in the beginning so it prints slanted
+    instead of centered
+
+    need to find a way to 
+        a. inverse the number of spaces (see notebook)
+        b. get it to split the number of spaces (which is an even number)
+        evenly on both sides of the characters
+            b is as easy as printing numSpaces/2, twice
+
+third trial code:
+ for (let i = 0; i < height; i++) {
+    let numSpaces = 2*i-2;
+    let numChars = 2*i-1;
+
+    helpers.printCountTimes(' ', (numSpaces/2));
+    helpers.printCountTimes('#', numChars);
+    helpers.printCountTimes(' ', (numSpaces/2));
+    helpers.printNewLine();
+  }
+
+results: 
+    okay that did the trick as far as halving the number of spaces on both sides
+    still not centered tho lol
+
+sidenote:
+if this exercise was to print an obtuse triangle, i fucking killed it
+
+thoughts:
+    do i need to start a different counter backwards?? 
+
+AHA I GOT IT (i hope)
+    number of spaces= (2*height)-(2*i)
+
+aaaaaand i did it! 
