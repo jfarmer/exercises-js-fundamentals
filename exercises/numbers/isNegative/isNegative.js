@@ -4,9 +4,17 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is negative and false otherwise
  */
+
 function isNegative(num) {
-  return _____;
+  if (num < 0) {
+    return true; 
+  } 
+  else {
+  return false;
 }
+}
+
+
 
 if (require.main === module) {
   console.log('Running sanity checks for isNegative:');
