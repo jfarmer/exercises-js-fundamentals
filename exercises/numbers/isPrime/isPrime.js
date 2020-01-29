@@ -10,21 +10,18 @@
  * @param {number} num - The positive integer whose primality we want to check
  * @returns {boolean} True if num is prime and false otherwise
  */
-function isPrime(num) {
-  let i = 1;
-  while(i < num)
-  {i++;
-    if(num === 2)
-    {return true}
-    else if(num%i === 0)
-    {return false}
-    else {return true}
+function isPrime(n) {
+  if (n % 2 === 0 && n !== 2)
+    { return false; }
+      
+  for(let d = 3; d < n; d += 2)
+    {if (n % d === 0)
+        { return false;}
     }
-
-  
+    return true;
 }
 
-if (require.main === module) {
+if(require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
   console.log(isPrime(5));
