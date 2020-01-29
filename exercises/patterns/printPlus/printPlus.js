@@ -37,11 +37,26 @@ function printPlus(height) {
     throw new Error(`height must be an odd integer, received: ${height}`);
   }
 
-  for (let i = 0; i < height; i++) {
-    // This is your job. :)
+  let midpoint = Math.floor((height/2));
+  //console.log(midpoint);
 
+ 
+    for (let j = 1; j <= midpoint; j++)
+    {
+      helpers.printCountTimes(' ', midpoint);
+      helpers.printCountTimes('#', 1);
+      helpers.printNewLine();
+    }
+    helpers.printCountTimes('#', height);
     helpers.printNewLine();
-  }
+    for (let q = 1; q <= midpoint; q++)
+    {
+      helpers.printCountTimes(' ', midpoint);
+      helpers.printCountTimes('#', 1);
+      helpers.printNewLine();
+    }
+  
+
 }
 
 /**
