@@ -32,20 +32,31 @@ function rot13(string) {
   // This is your job. :)
   let original_ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let target_ABC =   "NOPQRSTUVWXYZABCDEFGHIJKLM";
+  string=string.toUpperCase();
 
   let output = '';
+  //string = string.split(' ');
   for(let i=0;i<string.length;i++){
     let char = string[i];
+    
     let charIndex = original_ABC.indexOf(char);
+    if(charIndex === -1){
+      output+=char;
+    }
+    else{
     output+=target_ABC[charIndex];
 
   }
+}
+  
   return output;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
   console.log(rot13('HELLO'));
+  console.log(rot13('HELLO, WORLD'));
+  console.log(rot13('Uryyb, jbeyq!'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
