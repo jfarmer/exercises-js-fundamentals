@@ -8,16 +8,16 @@
  */
 
 function longestWord(string) {
-  var words = string.split('');
+  let words = string.split(' ');
   console.log(words);
-  const compare = [];
-  for(j=0;j<length.words;j++)
+  let runningLongest = words[0];
+  for(let word of words)
   {
-  let i = words.findIndex(' ')
-  j++;
-   let word = array.slice(i);
-
+    if(word.length > runningLongest.length)
+    { runningLongest = word; }
   }
+   
+  return runningLongest;
 }
 
 if (require.main === module) {
