@@ -30,10 +30,22 @@
 
 function rot13(string) {
   // This is your job. :)
+  let original_ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let target_ABC =   "NOPQRSTUVWXYZABCDEFGHIJKLM";
+
+  let output = '';
+  for(let i=0;i<string.length;i++){
+    let char = string[i];
+    let charIndex = original_ABC.indexOf(char);
+    output+=target_ABC[charIndex];
+
+  }
+  return output;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
+  console.log(rot13('HELLO'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
