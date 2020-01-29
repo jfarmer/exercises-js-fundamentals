@@ -4,7 +4,7 @@
   times, etc.
 */
 let helpers = require('../printHelpers');
-
+//DONE
 /**
  * Given an integer `height`, prints a hollow square `height` characters tall
  * consisting of `#` characters for the border.
