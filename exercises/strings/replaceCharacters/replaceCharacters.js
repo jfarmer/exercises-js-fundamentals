@@ -11,15 +11,28 @@
  *   letters replaced according to replacementDict
  */
 
+var replace = {};
+
+replace['h'] = "y";
+replace['l'] = "8";
+
 function replaceCharacters(string, replacementDict) {
-  // This is your job. :)
+  let characters = string.split("");
+  for(j=0;j<characters.length;j++)
+  {
+    if(replacementDict[ characters[j] ] != null)
+    { characters[j] = replacementDict[ characters[j] ];
+    }
+  }
+  return characters.join("");
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for replaceCharacters:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(replaceCharacters("hello", replace) === "ye88o");
+
+
 }
 
 module.exports = replaceCharacters;
