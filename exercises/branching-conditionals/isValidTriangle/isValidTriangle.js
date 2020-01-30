@@ -8,7 +8,9 @@
  * @returns {boolean} True if a triangle exists with side lengths of a, b, and c. Returns false otherwise.
  */
 function isValidTriangle(a, b, c) {
-  return a + b > c && a + c > b && c + b > a;
+  let sides = [a, b, c].sort();
+
+  return sides[0] + sides[1] > sides[2];
 }
 
 if (require.main === module) {
