@@ -22,8 +22,13 @@ if (require.main === module) {
   console.log(isValidTriangle(5, 3, 4) === true);
   console.log(isValidTriangle(5, 4, 3) === true);
 
-  // Add your own sanity checks here. Test negative cases.
-  // How else will you be sure your code does what you think it does?
+  console.log(isValidTriangle(1, 1, 8) === false);
+  console.log(isValidTriangle(0, 0, 0) === false);
+
+  console.log(isValidTriangle(3, 4, 0) === false);
+  console.log(isValidTriangle(3, 0, 5) === false);
+  console.log(isValidTriangle(0, 4, 5) === false);
+
 }
 
 module.exports = isValidTriangle;
