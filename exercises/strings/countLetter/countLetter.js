@@ -21,12 +21,34 @@
  * @returns {string} The number of times target letter appears in input string
  */
 
+
+// Arian's thoughts://
+ /** 
+  * Ok i remember that to look through a string we need a for loop
+  * Dont remember how that is made so look it up
+  * Great, now that i have looked through the array, how do i count up what the param i'm giving it? 
+  * I think you can just make it a variable and if that variable is equal to it do a simple add fucn
+  * I'm having a hard time conceptualize where to add the letter into the function 
+*/
+
 function countLetter(string, letter) {
-  // This is your job. :)
+
+  totalCount = 0 
+
+  for (i = 0; i < string.length ; i++) {
+    if (letter == string[i] ) {
+      totalCount++;
+    }
+  }
+  return totalCount
+  
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countLetter:');
+
+  console.log(countLetter("fuck", "k"))
+  console.log(countLetter("Wow this was crazy wow","w"))
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
