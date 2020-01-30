@@ -12,15 +12,28 @@
  * @returns {string} A copy of the input string with target replaced by replaceWith
  */
 
-function replaceCharacter(string, target, replaceWith) {
-  // This is your job. :)
+function replaceCharacter(string, replace, replaceWith) {
+  let stringArray = [];
+  stringArray = string.split("");
+
+  for(let i = 0;i < string.length; i++)
+  {
+    if(stringArray[i] ===  replace)
+    {
+          stringArray.splice(i, 1, replaceWith);
+    }
+  }
+  editedWord = stringArray.join("");
+  return editedWord;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for replaceCharacter:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(replaceCharacter("word","r","o") === "wood");
+  console.log(replaceCharacter("weep","e","E") === "wEEp");
+  console.log(replaceCharacter("weep","p","d") === "weed");
+  console.log(replaceCharacter("weep","e","l") === "wllp");
 }
 
 module.exports = replaceCharacter;
