@@ -11,16 +11,18 @@
  *   letters replaced according to replacementDict
  */
 
-var replace = {};
-
-replace['h'] = "y";
-replace['l'] = "8";
+let replace = {};
+  replace['h'] = "y";
+  replace['l'] = "8";
+  replace['b'] = "g";
 
 function replaceCharacters(string, replacementDict) {
+
   let characters = string.split("");
+
   for(j=0;j<characters.length;j++)
   {
-    if(replacementDict[ characters[j] ] != null)
+    if(replacementDict[ characters[j] ])
     { characters[j] = replacementDict[ characters[j] ];
     }
   }
@@ -31,8 +33,8 @@ if (require.main === module) {
   console.log('Running sanity checks for replaceCharacters:');
 
   console.log(replaceCharacters("hello", replace) === "ye88o");
-
-
+  console.log(replaceCharacters("jello", replace) === "je88o");
+  console.log(replaceCharacters("breen", replace) === "green");
 }
 
-module.exports = replaceCharacters;
+module.export = replaceCharacters;
