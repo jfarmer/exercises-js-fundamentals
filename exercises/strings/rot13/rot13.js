@@ -27,16 +27,43 @@
  * @param {string} string - The string to replace a character in
  * @returns {string} A lowercase copy of the input string
  */
+  let alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklm";
 
-function rot13(string) {
-  // This is your job. :)
+  let conversion = {};
+
+ for(i=0;i<alphabet.length-13;i++)
+ {
+   
+    conversion[ alphabet[i] ] = alphabet[i+13];
+ }
+ conversion[" "] = " ";
+ conversion["!"] = "!";
+ conversion[","] = ",";
+ conversion["."] = ".";
+ 
+ console.log(alphabet);
+ console.log(conversion);
+
+function rot13(string) 
+{
+  let characters = string.split("");
+
+  for(q=0;q<string.length;q++)
+  {
+    characters[q] = conversion[ characters[q] ];
+  }
+  
+  let finalWord = characters.join("");
+  console.log(finalWord);
+  return finalWord;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for rot13:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(rot13("aint nothin but a g thang") === "nvag abguva ohg n t gunat");
+  console.log(rot13("cookies and cream") === "pbbxvrf naq pernz");
+  
 }
+
 
 module.exports = rot13;
