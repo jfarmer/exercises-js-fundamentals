@@ -14,16 +14,49 @@
  * @param {string} string - The string to replace a character in
  * @returns {string} A lowercase copy of the input string
  */
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-function rotN(string) {
-  // This is your job. :)
+  let conversion = {};
+
+ 
+ conversion[" "] = " ";
+ conversion["!"] = "!";
+ conversion[","] = ",";
+ conversion["'"] = "'";
+ conversion["."] = ".";
+ 
+ 
+
+function rotN(string, n) 
+{
+  let newAlphabet = "";
+  let characters = string.split("");
+  for(z=0;z<=n;z++)
+  {
+    newAlphabet = alphabet + alphabet[z];
+  }
+
+  for(i=0;i<newAlphabet.length-n;i++)
+  {
+   
+    conversion[ newAlphabet[i] ] = newAlphabet[i+n];
+  }
+
+  for(q=0;q<string.length;q++)
+  {
+    characters[q] = conversion[ characters[q] ];
+  }
+  
+  let finalWord = characters.join("");
+  console.log(finalWord);
+  return finalWord;
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for rotN:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log('Running sanity checks for rot13:');
+  console.log(rotN("ain't nothin' but a g thang", 1) === "bjo'u opuijo' cvu b h uiboh");
+  console.log(rotN("cookies and cream!", 7) === "jvvrplz huk jylht!");
+  
 }
 
 module.exports = rotN;
