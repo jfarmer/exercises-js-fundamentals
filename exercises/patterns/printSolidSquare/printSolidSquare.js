@@ -26,6 +26,10 @@ let helpers = require('../printHelpers');
  *
  * @param {number} height - The height of the square to print
  */
+
+
+// what about the columns, why isn't it being defined // 
+
 function printSolidSquare(height) {
   /*
     Reflect: given `height`...
