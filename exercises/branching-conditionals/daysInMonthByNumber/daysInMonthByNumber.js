@@ -47,7 +47,7 @@ function daysInMonthByNumber(monthNum) {
     throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
   }
   else {
-    return monthNum = monthDays[monthNum];
+    return monthDays[monthNum];
     }
   }
 
