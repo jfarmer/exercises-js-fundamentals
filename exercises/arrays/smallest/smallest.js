@@ -7,20 +7,22 @@
  * @returns {number} The smallest element in the array
  */
 function smallest(array) {
-  let _____ = _____;
+  let currentSmallest = array[0];
 
-  for (let _____ of _____) {
-    if (_____) {
-      _____ = _____;
+  for (let element of array) {
+    if (element < currentSmallest) {
+      currentSmallest = element;
     }
   }
 
-  return _____;
+  return currentSmallest;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for smallest:');
 
+  console.log(smallest([0, -100, 50, -200]))
+  console.log(smallest([1, 2, 3]));
   console.log(smallest([1, 2, 3]) === 1);
   console.log(smallest([0, -100, 50, -200]) === -200);
   console.log(smallest([-200, -400, -100, -300]) === -400);
