@@ -8,7 +8,6 @@
  */
 function largest(array) {
   let largestSoFar = array[0];
-
   for (let element of array) {
     if (element > largestSoFar) {
       largestSoFar = element;
@@ -21,14 +20,16 @@ function largest(array) {
 if (require.main === module) {
   console.log('Running sanity checks for largest:');
 
-  console.log(largest([1, 2, 3]) === 3);
-  console.log(largest([0, -100, 50, -200]) === 50);
-  console.log(largest([-200, -400, -100, -300]) === -100);
-  console.log(largest([0]) === 0);
-  console.log(largest([1]) === 1);
-  console.log(largest([-1]) === -1);
-  console.log(largest([11, 11, 11]) === 11);
+  console.log(largest([1,2,3]));
+  console.log(largest([3,2,1]));
+  console.log(largest([1,3,2]));
+   
   console.log(largest([-22, -11, -22]) === -11);
 }
 
 module.exports = largest;
+
+
+/// so the way to  think about this problem is that the array[0] is the starting value.  
+/// then that  the element is iterating through the  array 
+/// what is still a lil confusing is why the return largestSoFar isn't array[0]??? what happens to global vs local variables etc? is it because we've defined largestSoFar within the for loop and that takes precedence?
