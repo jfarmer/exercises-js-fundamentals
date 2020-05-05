@@ -35,7 +35,16 @@ if (require.main === module) {
   console.log('');
   console.log('Checking multiples of 2:');
 
-  let multiplesOf2 = [-13 * 2, -2 * 2, -1 * 2, 0 * 2, 1 * 2, 2 * 2, 19 * 2, 1234 * 2];
+  let multiplesOf2 = [
+    -13 * 2,
+    -2 * 2,
+    -1 * 2,
+    0 * 2,
+    1 * 2,
+    2 * 2,
+    19 * 2,
+    1234 * 2,
+  ];
   for (let num of multiplesOf2) {
     console.log(isMultipleOf(num, 2) === true);
     console.log(isMultipleOf(num + 1, 2) === false);
@@ -44,7 +53,17 @@ if (require.main === module) {
   console.log('');
   console.log('Checking multiples of 3:');
 
-  let multiplesOf3 = [-13 * 3, -2 * 3, -1 * 3, 0 * 3, 1 * 3, 19 * 3, 1234 * 3];
+  let multiplesOf3 = [
+    -13 * 3,
+    -2 * 3,
+    -1 * 3,
+    0 * 3,
+    1 * 3,
+    2 * 3,
+    19 * 3,
+    1234 * 3,
+  ];
+
   for (let num of multiplesOf3) {
     console.log(isMultipleOf(num, 3) === true);
     console.log(isMultipleOf(num + 1, 3) === false);
@@ -53,7 +72,15 @@ if (require.main === module) {
 
   console.log('');
   console.log('Checking multiples of 17:');
-  let multiplesOf17 = [-13 * 17, -2 * 17, -1 * 17, 0 * 17, 1 * 17, 19 * 17, 1234 * 17];
+  let multiplesOf17 = [
+    -13 * 17,
+    -2 * 17,
+    -1 * 17,
+    0 * 17,
+    1 * 17,
+    19 * 17,
+    1234 * 17,
+  ];
 
   for (let num of multiplesOf17) {
     console.log(isMultipleOf(num, 17) === true);

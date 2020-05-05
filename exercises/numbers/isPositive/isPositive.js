@@ -14,7 +14,7 @@ if (require.main === module) {
   console.log(isPositive(0) === false);
   console.log(isPositive(1) === true);
   console.log(isPositive(-1) === false);
-  console.log(isPositive(-100.20) === false);
+  console.log(isPositive(-100.201) === false);
 }
 
 module.exports = isPositive;

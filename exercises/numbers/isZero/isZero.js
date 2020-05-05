@@ -14,7 +14,7 @@ if (require.main === module) {
   console.log(isZero(0) === true);
   console.log(isZero(1) === false);
   console.log(isZero(-1) === false);
-  console.log(isZero(-100.20) === false);
+  console.log(isZero(-100.201) === false);
 }
 
 module.exports = isZero;
