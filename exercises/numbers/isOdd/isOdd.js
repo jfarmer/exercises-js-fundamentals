@@ -15,7 +15,7 @@
  */
 function isOdd(num) {
   // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
+  return num % 2 === 1;
 }
 
 if (require.main === module) {
@@ -23,16 +23,16 @@ if (require.main === module) {
 
   console.log('Running sanity checks for isOdd');
 
-  console.log(isOdd(0) === false);
+  console.log(isOdd(0));
 
   // These should all be odd
   for (let num of oddInputs) {
-    console.log(isOdd(num) === true);
+    console.log(isOdd(num));
   }
 
   // If num is odd then num + 1 is even
   for (let num of oddInputs) {
-    console.log(isOdd(num + 1) === false);
+    console.log(isOdd(num + 1));
   }
 }
 
