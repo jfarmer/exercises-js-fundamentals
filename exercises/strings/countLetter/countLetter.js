@@ -21,12 +21,26 @@
  * @returns {string} The number of times target letter appears in input string
  */
 
+string = []
+let x;
+
 function countLetter(string, letter) {
-  // This is your job. :)
+let count = 0
+for (x of string) {
+  if (x === letter) {
+      count++;
+      return count;
+    }
+  }
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countLetter:');
+  console.log(countLetter('hello', 'l')); // => 2
+  console.log(countLetter('Mississippi', 's')); // => 4
+  console.log(countLetter('Mississippi', 'x')); // => 0
+  console.log(countLetter('Mississippi', 'M')); // => 0
+
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
