@@ -28,8 +28,19 @@ let helpers = require('../printHelpers');
  */
 function printHollowSquare(height) {
   for (let i = 0; i < height; i++) {
-    // This is your job. :)
-
+    if (i===0||i===(height-1)) {
+      for (let j=0;j<height;j++) {
+        helpers.print('#');
+      }
+    } else {
+      for (let j=0;j<height;j++) {
+        if (j===0||j===(height-1))  {
+          helpers.print('#');
+        } else{
+          helpers.print(' ');
+        }
+      }
+    }
     helpers.printNewLine();
   }
 }

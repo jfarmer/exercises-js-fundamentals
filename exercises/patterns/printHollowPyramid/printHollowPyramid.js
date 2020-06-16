@@ -29,8 +29,39 @@ let helpers = require('../printHelpers');
  */
 function printHollowPyramid(height) {
   for (let i = 0; i < height; i++) {
-    // This is your job. :)
-
+    //i is current height
+    let widthhash= 2*(height-1)+1; //width of last line
+    let currenthash = 2*i+1; //number of # in current line
+    let emptyhash = (widthhash-currenthash)/2;
+    if (i===0) {
+      //if first line, only one #
+      for (let j=0;j<emptyhash;j++) {
+        helpers.print(' ');
+      } 
+      helpers.print('#');
+      for (let j=0;j<emptyhash;j++) {
+        helpers.print(' ');
+      } 
+    } else if (i===(height-1)) {
+      //if last line, fill all
+      for (let j=0;j<widthhash;j++) {
+        helpers.print('#');
+      } 
+    } else {
+      //if in between lines
+      for (let j=0;j<emptyhash;j++) {
+        helpers.print(' ');
+      } 
+      helpers.print('#');
+      for (let j=0;j<(currenthash-2);j++) {
+        helpers.print(' ');
+      }
+      helpers.print('#');
+      for (let j=0;j<emptyhash;j++) {
+        helpers.print(' ');
+      } 
+    }
+    //start new line
     helpers.printNewLine();
   }
 }
