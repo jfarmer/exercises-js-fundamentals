@@ -5,13 +5,13 @@
  * @returns {boolean} The temperature in Fahrenheit
  */
 function celsiusToFahrenheit(temp) {
-  // This is your job. :).
+  return temp * 9/5 + 32
+  
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for celsiusToFahrenheit:');
-
-  // Your sanity checks go here.
+  console.log(celsiusToFahrenheit(31));
 }
 
 module.exports = celsiusToFahrenheit;
