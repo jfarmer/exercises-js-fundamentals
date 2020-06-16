@@ -21,7 +21,28 @@
  * @param {number} base - The base
  * @returns {boolean} True if `num` is a power of `base` and false otherwise.
  */
+
+
+let counter = 1
 function isPowerOf(num, base) {
+  var powerCheck = false
+  if (counter === num || num === 1){
+    powerCheck = true
+    counter = 1
+    return powerCheck 
+  }
+  if (base === 1){
+    counter = 1
+    return powerCheck 
+  }
+  else {
+    while (counter < num) {
+      counter *= base
+      return isPowerOf(num, base)
+    }
+  }
+  counter = 1
+  return powerCheck
   // Your code here
   // Remember, you can assume that num is a positive integer.
 }
@@ -30,9 +51,9 @@ if (require.main === module) {
   console.log('Running sanity checks for isPowerOf:');
 
   // Is 0 a power of two? Is 1?
-  // console.log(isPowerOf(0, 2) === _____);
-  // console.log(isPowerOf(1, 2) === _____);
-  // console.log(isPowerOf(1, 3) === _____);
+  console.log(isPowerOf(0, 2) === false);
+  console.log(isPowerOf(1, 2) === true);
+  console.log(isPowerOf(1, 3) === true);
 
   console.log(isPowerOf(2 ** 4, 2) === true);
   console.log(isPowerOf(2 ** 4 + 1, 2) === false);
@@ -40,6 +61,8 @@ if (require.main === module) {
   console.log(isPowerOf(3 ** 5 + 1, 3) === false);
 
   // Add your own sanity checks.
-}
+  console.log(isPowerOf(6,1) === false);
+} 
+
 
 module.exports = isPowerOf;

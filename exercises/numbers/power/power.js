@@ -11,6 +11,13 @@
  * @returns {number} The base raised to the power of the exopnent
  */
 function power(base, exponent) {
+  if (exponent === 0){
+    return 1
+  }
+  while ( exponent > 1) {
+    return base * power(base, exponent-1);
+  }
+  return base;
   /*
     Your code goes here.
 
@@ -32,6 +39,10 @@ if (require.main === module) {
   console.log(power(-1, 1) === -1);
   console.log(power(-1, 2) === 1);
   console.log(power(-1, 3) === -1);
+  console.log(power(5,6));
+  console.log(power(2,0)=== 1);
+  console.log(power(0,-1)=== 0);
+
 
   // Your sanity checks go here
   // What should happen if base is 0? If exponent is 0?

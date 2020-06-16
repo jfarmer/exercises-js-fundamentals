@@ -21,16 +21,26 @@
 
 function isPerfectSauare(num) {
   // A negative number can't be a perfect square, so immediately return false.
-  if (num < -1) {
+  var hasSquare = false
+  if (num <= 0) {
     return false;
   }
-
+  for (let i = 0; i <= num/2; i++) {
+    if (i**2 === num) {
+      hasSquare = true
+    }
+  }
+  return hasSquare
   // The rest is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isPerfectSquare:');
-
+  console.log(isPerfectSauare(4) === true)
+  console.log(isPerfectSauare(9) === true)
+  console.log(isPerfectSauare(7) === false)
+  console.log(isPerfectSauare(49) === true)
+  console.log(isPerfectSauare(0) === false)
   // Your sanity checks go here
 }
 

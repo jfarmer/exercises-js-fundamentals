@@ -22,12 +22,19 @@
  * @returns {number} The fibonacci of num
  */
 function fibonacci(n) {
+  let prev = 0
+  let sum = 0
+  for (let i = 1; i <= n; i++) {
+    sum = i + prev
+    prev = i
+    return sum
+  }
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for fibonacci:');
-
+  console.log(fibonacci(10))
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

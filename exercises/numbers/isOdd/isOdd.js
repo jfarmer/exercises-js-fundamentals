@@ -14,8 +14,12 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function isOdd(num) {
-  // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
+  if (num % 2 === 1){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 if (require.main === module) {

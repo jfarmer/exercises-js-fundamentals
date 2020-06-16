@@ -22,12 +22,19 @@
  */
 
 function countLetter(string, letter) {
-  // This is your job. :)
+  let counter = 0
+  for (let i of string) {
+    if (i === letter) {
+      counter += 1
+    }
+  }
+  return counter
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countLetter:');
-
+  console.log(countLetter("hello","l"))
+  console.log(countLetter("this is a sentence","e"))
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

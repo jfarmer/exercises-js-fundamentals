@@ -13,7 +13,13 @@
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
 function isMultipleOf(n, d) {
-  return _____;
+  if (n%d === 0){
+    return true;
+  }
+  else {
+    return false;
+  }
+  
 }
 
 if (require.main === module) {
@@ -23,6 +29,8 @@ if (require.main === module) {
     their presence here makes it harder, not easier to understand what's going on.
 
     Think of 1-3 ways you might address this.
+    1) We could check the fuction for n and d that are extremes, so really low and high values
+    2) Check for values we already know the answer to, i.e. take 200/10, we know that should be true 
   */
   console.log('Running sanity checks for isMultipleOf:');
 

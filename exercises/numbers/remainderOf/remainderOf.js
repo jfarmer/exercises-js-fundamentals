@@ -16,6 +16,10 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function remainderOf(n, d) {
+  while (n >= d){
+    return remainderOf(n-d,d)
+  }
+  return n
   /*
     This is your job. :)
 
@@ -26,9 +30,9 @@ function remainderOf(n, d) {
 
 if (require.main === module) {
   console.log('Running sanity checks for remainderOf');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(remainderOf(10, 1)=== 0);
+  console.log(remainderOf(129, 17)=== 10);
+  console.log(remainderOf(118, 5)=== 3);
 }
 
 module.exports = remainderOf;

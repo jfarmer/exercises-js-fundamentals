@@ -20,15 +20,24 @@ function daysInMonthByNumber(monthNum) {
     throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
   }
 
-  // This is your job. :)
+  if (monthNum %2 == 0){
+    return 30
+  }
+  else {
+    return 31
+  }
+ 
+ 
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isZero:');
 
-  console.log(daysInMonthByNumber(1) === _____);
-  console.log(daysInMonthByNumber(2) === _____);
-  console.log(daysInMonthByNumber(3) === _____);
+  console.log(daysInMonthByNumber(1) === 31);
+  console.log(daysInMonthByNumber(2) === 30);
+  console.log(daysInMonthByNumber(3) === 31);
+  console.log(daysInMonthByNumber(10) === 30);
+
 }
 
 module.exports = daysInMonthByNumber;

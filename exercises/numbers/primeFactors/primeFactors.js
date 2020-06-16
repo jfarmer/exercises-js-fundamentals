@@ -14,6 +14,19 @@
  * @returns {number[]} An array of all the prime factors of the given integer
  */
 function primeFactors(num) {
+  for (l = 0; l <= num; l++) {
+    
+    if (l <= 1 ) {
+      return false
+    }
+    for (i = 2; i < l; i++) {
+      if (num%i === 0){
+        return false }
+      
+    }
+    return true
+  }
+  
   /*
     Your code goes here.
 

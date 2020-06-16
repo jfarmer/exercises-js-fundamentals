@@ -14,6 +14,9 @@ function factors(num) {
   let results = [];
 
   for (let i = 1; i <= num; i++) {
+    if (num%i === 0){
+      results.push(i)
+    }
     // Your code goes here. :)
     // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
   }
@@ -22,7 +25,11 @@ function factors(num) {
 
 if (require.main === module) {
   console.log('Running sanity checks for factors:');
-
+  console.log(factors(5))
+  console.log(factors(4))
+  console.log(factors(10))
+  console.log(factors(15))
+  console.log(factors(36))
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

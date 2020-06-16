@@ -5,7 +5,12 @@
  * @returns {boolean} True if num is positive and false otherwise
  */
 function isPositive(num) {
-  return _____;
+  if (num > 0){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 if (require.main === module) {
