@@ -8,14 +8,17 @@ function celsiusToFahrenheit(temp) {
 {
 var cTemp = celsius;
 var conversion = cTemp * 9/5 + 32;
-var message= ctemp+
+var message = (cTemp+'\xB0C is ' + cToFahr + ' \xB0F.');
+console.log (message)
 }
 
-
-if (require.main === module) {
-  console.log('Running sanity checks for celsiusToFahrenheit:');
-
-  // Your sanity checks go here.
+if ( typeof cTemp !== 'undefined' ) {
+  return cTemp;
+  } else {
+    return 'cTemp not defined';
+  }
 }
+
+ // Your sanity checks go here
 
 module.exports = celsiusToFahrenheit;

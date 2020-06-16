@@ -14,11 +14,21 @@ function factors(num) {
   let results = [];
 
   for (let i = 1; i <= num; i++) {
-    // Your code goes here. :)
+    Math.floor(Math.sqrt(num))
+    if (num % i === 0)
+    {
+     results.push(i);
+     if (n / i !== i)
+      results.push(n / i);
+    }
+   results.sort(function(x, y)
+     {
+       return x - y;});  // numeric sort
+       return results;
+      }
+
     // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
   }
-  return results;
-}
 
 if (require.main === module) {
   console.log('Running sanity checks for factors:');
