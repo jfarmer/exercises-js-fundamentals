@@ -11,14 +11,14 @@
  */
 
 function capitalize(num) {
-  // This is your job. :)
+  return string = num,
+  string.charAt(0).toUpperCase() + string.slice(1,7);
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for capitalize:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(capitalize('tindall'));
 }
 
 module.exports = capitalize;
