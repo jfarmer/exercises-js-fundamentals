@@ -12,7 +12,8 @@
  *   and false otherwise.
  */
 function allPositive(array) {
-  // This is your job. :)
+  // This is your job. :D
+  
 }
 
 if (require.main === module) {
