@@ -10,8 +10,11 @@
  * @returns {string} A capitalized copy of the string
  */
 
-function capitalize(num) {
-  // This is your job. :)
+function capitalize(num) { 
+  var a = 'The mother gave her daughter a cookie'
+ 
+  let myString = 'The mother gave her daughter a cookie.';
+myString.toUpperCase();
 }
 
 if (require.main === module) {
