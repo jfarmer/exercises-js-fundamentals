@@ -36,10 +36,20 @@ function printPlus(height) {
   if (!Number.isInteger(height) || height % 2 !== 1) {
     throw new Error(`height must be an odd integer, received: ${height}`);
   }
-
   for (let i = 0; i < height; i++) {
-    // This is your job. :)
-
+    if (i===Math.floor(height/2)) {
+      for (let j=0;j<height;j++) {
+        helpers.print('#');
+      }
+    } else {
+      for (let j = 0; j <height;j++) {
+        if (j===Math.floor(height/2)) {
+          helpers.print('#');
+        } else {
+          helpers.print(' ');
+        }
+      }
+    }
     helpers.printNewLine();
   }
 }
