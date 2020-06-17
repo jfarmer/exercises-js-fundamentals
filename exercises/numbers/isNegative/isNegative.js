@@ -5,6 +5,9 @@
  * @returns {boolean} True if num is negative and false otherwise
  */
 function isNegative(num) {
+  // The _____ is meant to be "fill in the blank"
+  // Look at isZero and compare; what makes sense here?
+
   return _____;
 }
 
