@@ -22,6 +22,7 @@
  * @returns {number} The fibonacci of num
  */
 function fibonacci(n) {
+  /*pranjal
   let prev = 0
   let sum = 0
   for (let i = 1; i <= n; i++) {
@@ -29,7 +30,13 @@ function fibonacci(n) {
     prev = i
     return sum
   }
-  // This is your job. :)
+  */
+  if (n===0) {
+    return 0;
+  } else if (n===1) {
+    return 1;
+  } 
+  return fibonacci(n-2)+fibonacci(n-1);
 }
 
 if (require.main === module) {

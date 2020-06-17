@@ -14,6 +14,7 @@
  * @returns {number[]} An array of all the prime factors of the given integer
  */
 function primeFactors(num) {
+  /*pranjal's code
   for (l = 0; l <= num; l++) {
     
     if (l <= 1 ) {
@@ -26,23 +27,35 @@ function primeFactors(num) {
     }
     return true
   }
-  
-  /*
-    Your code goes here.
-
-    Work out one version that works and don't worry about performance.
-
-    If you're having trouble working it out in code, step out of JS-land
-    and use pen/paper, index cards, etc. — anything that helps you think
-    about it without getting stuck in JavaScript syntax.
   */
+  let primearray =[];
+    for (let i=2;i<=num;i++) {
+      while (num%i === 0) {
+        if(ifPrime(i))  {
+          primearray.push(i);
+          num = num/i;
+        } 
+      }
+    }
+  //if num can be only divided by 1 and itself, add to the array
+  return primearray;
+}
+
+function ifPrime(num) {
+  if (num==1) {
+    return false;
+  }
+  for (let i=2;i<num;i++) {
+    if (num%i === 0){
+      return false }
+  }
+  return true;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for primeFactors:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(primeFactors(2*3*5*7*13));
+  console.log(primeFactors(2*2*2*2*2*5));
 }
 
 module.exports = primeFactors;
