@@ -10,7 +10,7 @@
  * @returns {string} A capitalized copy of the string
  */
 
-function capitalize(num) {
+function capitalize(string) {
   // This is your job. :)
 }
 
