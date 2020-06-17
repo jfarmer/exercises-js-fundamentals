@@ -24,11 +24,23 @@ function daysInMonthByNumber(monthNum) {
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for isZero:');
+  console.log('Running sanity checks for daysInMonthByNumber:');
+
+  // The _____ is meant to be "fill in the blank"
+  // Loop up how many days are in each month.
 
   console.log(daysInMonthByNumber(1) === _____);
   console.log(daysInMonthByNumber(2) === _____);
   console.log(daysInMonthByNumber(3) === _____);
+  console.log(daysInMonthByNumber(4) === _____);
+  console.log(daysInMonthByNumber(5) === _____);
+  console.log(daysInMonthByNumber(6) === _____);
+  console.log(daysInMonthByNumber(7) === _____);
+  console.log(daysInMonthByNumber(8) === _____);
+  console.log(daysInMonthByNumber(9) === _____);
+  console.log(daysInMonthByNumber(10) === _____);
+  console.log(daysInMonthByNumber(11) === _____);
+  console.log(daysInMonthByNumber(12) === _____);
 }
 
 module.exports = daysInMonthByNumber;
