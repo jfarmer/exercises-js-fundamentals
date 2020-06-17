@@ -39,7 +39,7 @@ if (require.main === module) {
 
   console.log(daysInMonthByNumber(1) === 31);
   console.log(daysInMonthByNumber(2) === 28);
-  console.log(daysInMonthByNumber(3) === 31);
+  console.log(daysInMonthByNumber(3) === 30);
 }
 
 //module.exports = daysInMonthByNumber;
