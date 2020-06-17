@@ -28,19 +28,13 @@ let helpers = require('../printHelpers');
  * @param {number} height - The height of the pyramid to print
  */
 function printSolidPyramid(height) {
-  /*
-    Reflect: given `height`...
-    1. How many lines to we want to print?
-    2. How many spaces are start a given line, followed by how many # characters?
-
-    Work through 3-4 examples by hand and try to notice a pattern.
-  */
   for (let i = 0; i < height; i++) {
-    let numSpaces = _____;
-    let numChars = _____;
+    let numSpaces = (2*(height-1)-2*i+1)/2;
+    let numChars = 2*i+1;
 
     helpers.printCountTimes(' ', numSpaces);
     helpers.printCountTimes('#', numChars);
+    helpers.printCountTimes(' ',numSpaces);
     helpers.printNewLine();
   }
 }
