@@ -13,7 +13,11 @@
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
 function isMultipleOf(n, d) {
-  return _____;
+  // This is your job. :)
+
+  // Consider handling two cases separately:
+  //   1. When d === 0
+  //   2. When d !== 0
 }
 
 if (require.main === module) {
@@ -26,11 +30,19 @@ if (require.main === module) {
   */
   console.log('Running sanity checks for isMultipleOf:');
 
+  // In general:
+  //   isMultipleOf(x, 0) should always return true since x * 0 === 0
+  //   isMultipleOf(0, x) should always return false (unless x is 0)
   console.log('Checking 0:');
-  console.log(isMultipleOf(0, 0) === false);
-  console.log(isMultipleOf(0, 1) === false);
-  console.log(isMultipleOf(0, 2) === false);
-  console.log(isMultipleOf(0, 13) === false);
+  console.log(isMultipleOf(0, 0) === true); // 0 should be a multiple of 0
+
+  console.log(isMultipleOf(0, 1) === true); // 0 should be a multiple of 1
+  console.log(isMultipleOf(0, 11) === true); // 0 should be a multiple of 11
+  console.log(isMultipleOf(0, -11) === true); // 0 should be a multiple of -11
+
+  console.log(isMultipleOf(1, 0) === false); // 1 should NOT be a multiple of 0
+  console.log(isMultipleOf(11, 0) === false); // 11 should be a multiple of 0
+  console.log(isMultipleOf(-11, 0) === false); // -11 should be a multiple of 0
 
   console.log('');
   console.log('Checking multiples of 2:');
