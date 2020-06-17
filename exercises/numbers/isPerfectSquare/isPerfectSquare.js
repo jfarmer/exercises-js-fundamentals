@@ -19,9 +19,9 @@
  * @returns {boolean} True if `num` is a perfect square and false otherwise.
  */
 
-function isPerfectSauare(num) {
+function isPerfectSquare(num) {
   // A negative number can't be a perfect square, so immediately return false.
-  if (num < -1) {
+  if (num < 0) {
     return false;
   }
 
@@ -34,4 +34,4 @@ if (require.main === module) {
   // Your sanity checks go here
 }
 
-module.exports = isPerfectSauare;
+module.exports = isPerfectSquare;
