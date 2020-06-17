@@ -21,21 +21,19 @@ let helpers = require('../printHelpers');
  * @param {number} n - The size of the multiplication table to print
  */
 function printMultiplicationTable(n) {
-  /*
-    This is your job. :)
-
-    Note: Getting the numbers aligned in a way that looks nice can be
-    a pain in the butt. Get one version working that prints out the
-    multiplication table without concern for alignment and then figure
-    out how to align the columns.
-  */
-
+  for (let i=1;i<=n;i++) {
+    for (let j=1;j<=n;j++) {
+      helpers.print(i*j);
+    }
+    helpers.printNewLine();
+  }
   helpers.printNewLine();
 }
 
 /**
  * For testing purposes, prints a diagram of the given height.
  */
+
 function multiplicationTablePrintTest(n) {
   console.log('');
   console.log(`Printing a ${n}-by-${n} MULTIPLICATION TABLE:`);
@@ -49,5 +47,6 @@ if (require.main === module) {
   multiplicationTablePrintTest(5);
   multiplicationTablePrintTest(8);
 }
+
 
 module.exports = printMultiplicationTable;
