@@ -22,14 +22,20 @@
  */
 
 function countLetter(string, letter) {
-  // This is your job. :)
+  
+  for(l of string) {
+    if(l === letter){
+      
+    }
+  }
+  return l.length
+
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countLetter:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(countLetter('jazz zipper zoo', 'z'))
 }
 
 module.exports = countLetter;
