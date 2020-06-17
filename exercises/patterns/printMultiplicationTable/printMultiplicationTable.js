@@ -24,6 +24,7 @@ function printMultiplicationTable(n) {
   for (let i=1;i<=n;i++) {
     for (let j=1;j<=n;j++) {
       helpers.print(i*j);
+
     }
     helpers.printNewLine();
   }
@@ -34,6 +35,7 @@ function printMultiplicationTable(n) {
  * For testing purposes, prints a diagram of the given height.
  */
 
+ //invalid argument type? if commented out, no error
 function multiplicationTablePrintTest(n) {
   console.log('');
   console.log(`Printing a ${n}-by-${n} MULTIPLICATION TABLE:`);
