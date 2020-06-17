@@ -33,6 +33,8 @@ function printSolidRightTriangle(height) {
     2. How many characters should be on each line?
   */
   for (let i = 0; i < height; i++) {
+    // The _____ is meant to be "fill in the blank"
+
     let numChars = _____;
 
     helpers.printCountTimes('#', numChars);
