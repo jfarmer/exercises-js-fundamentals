@@ -19,6 +19,17 @@ function daysInMonthByNumber(monthNum) {
   if (!Number.isInteger(monthNum) || monthNum < 1 || monthNum > 12) {
     throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
   }
+  
+  if (monthNum == 1 || monthNum == 3 || monthNum == 5 || monthNum == 7 || monthNum == 8 || monthNum == 10 || monthNum == 12) {
+    return 31
+  }
+  
+  if (monthNum == 2) {
+    return 28
+  }
+
+  return 30
+
 
   // This is your job. :)
 }
@@ -26,9 +37,9 @@ function daysInMonthByNumber(monthNum) {
 if (require.main === module) {
   console.log('Running sanity checks for isZero:');
 
-  console.log(daysInMonthByNumber(1) === _____);
-  console.log(daysInMonthByNumber(2) === _____);
-  console.log(daysInMonthByNumber(3) === _____);
+  console.log(daysInMonthByNumber(1) === 31);
+  console.log(daysInMonthByNumber(2) === 28);
+  console.log(daysInMonthByNumber(3) === 31);
 }
 
-module.exports = daysInMonthByNumber;
+//module.exports = daysInMonthByNumber;

@@ -21,15 +21,27 @@
  * @param {object[]} rightArray - The right array to concatenate
  * @returns {object[]} The concatenation of the two given arrays
  */
-function concat(leftArray, rightArray) {
+var leftArray = [1,2,3] ;
+var rightArray = [4,5,6] ;
+var Array = leftArray.concat(rightArray);
+
+var ashwin = [-123,21312,43241]
+var anusha = [23,4,5,5]
+
+var combined = ashwin.concat(anusha);
+
+
+console.log (Array);
+ 
+console.log (combined);
+
+
+// function concat(leftArray, rightArray) {
   // This is your job. :)
-}
-
-if (require.main === module) {
-  console.log('Running sanity checks for concat:');
-
+//if (require.main === module) {
+  //console.log('Running sanity checks for concat:');
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
-}
 
-module.exports = concat;
+
+//module.exports = concat;

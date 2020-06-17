@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/exercises/arrays/allPositive/allPositive.js"
+            "program": "${workspaceFolder}/exercises/branching-conditionals/daysInMonthByNumber/daysInMonthByNumber.js"
         }
     ]
 }
