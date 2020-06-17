@@ -5,7 +5,7 @@
  * @returns {boolean} True if num is positive and false otherwise
  */
 function isPositive(num) {
-  return _____;
+  return num > 0;
 }
 
 if (require.main === module) {
@@ -15,6 +15,8 @@ if (require.main === module) {
   console.log(isPositive(1) === true);
   console.log(isPositive(-1) === false);
   console.log(isPositive(-100.201) === false);
+  // console.loge(())
+    // How do I make it so that user input can also be determined as positive or not
 }
 
 module.exports = isPositive;
