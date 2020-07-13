@@ -1,39 +1,27 @@
 {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "standard"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
-    "_____": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
-  "rules": {
-    "comma-dangle": [
-      "error",
-      "always-multiline"
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "standard"
     ],
-    "prefer-const": 0,
-    "semi": [
-      2,
-      "always"
-    ],
-    "space-before-function-paren": [
-      "error",
-      "never"
-    ],
-    "quote-props": [
-      "error",
-      "consistent"
-    ]
-  }
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "comma-dangle": ["error", "always-multiline"],
+        "prefer-const": 0,
+        "semi": [2, "always"],
+        "space-before-function-paren": ["error", "never"],
+        "quote-props": ["error", "consistent"]
+    }
 }
