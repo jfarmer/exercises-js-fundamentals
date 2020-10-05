@@ -10,7 +10,7 @@
  * anyPositive([-10, -10, 1]); // => true
  *
  * @param {number[]} array - An array of numbers
- * @returns {boolean} True if every number in the input array is positive
+ * @returns {boolean} True if any number in the input array is positive
  *   and false otherwise.
  */
 function anyPositive(array) {
