@@ -7,8 +7,12 @@
         "jquery": true
     },
     "extends": [
+        "plugin:json/recommended",
         "eslint:recommended",
         "standard"
+    ],
+    "ignorePatterns": [
+        "docs/*"
     ],
     "globals": {
         "Atomics": "readonly",
