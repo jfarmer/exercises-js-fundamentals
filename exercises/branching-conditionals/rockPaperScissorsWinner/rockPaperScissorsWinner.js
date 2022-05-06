@@ -24,7 +24,7 @@
  * @returns {string} Returns 'win', 'lose', or 'draw' depending on
  *  whether the first player won, lost, or drew the match.
  */
-function rockPaperScissorsWinner(array) {
+function rockPaperScissorsWinner(firstPlayerMove, secondPlayerMove) {
   // This is your job. :)
 }
 
